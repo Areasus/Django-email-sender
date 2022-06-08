@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+
+{% block containermain %}
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5 border-right align-items-center border border-success">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-center">Contact US</h4>
+                    </div>
+                    <hr>
+                    <form method="post">
+                        <div class="row mt-3">
+                            {% csrf_token %}
+                            <div class="col-md-12"><label class="labels">Full Name</label><input type="text" class="form-control" placeholder="your full name" value="" name="studentName" id="studentName"></div>
+                            <div class="col-md-12"><label class="labels">email</label><input type="email" class="form-control" placeholder="mobile number" value="" name="email" id="email"></div>
+                            <div class="col-md-12"><label class="labels">phone</label><input type="text" class="form-control" placeholder="mobile number" value="" name="mobile" id="mobile"></div>
+                            <div class="col-md-12"><label class="labels">YOur Query</label><textarea class="form-control" placeholder="" value="" name="remarks" id="remarks"></textarea></div>
+                        </div>
+                        <div class="mt-5 text-center"><button class="btn btn-success profile-button" type="submit">Send</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
